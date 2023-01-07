@@ -1,12 +1,13 @@
 import javax.swing.*;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 
-public class Main {
+public class MainController {
     public static void main(String[] args) {
+        JFrame frame = new JFrame("OPM");
+        frame.setContentPane(new MainGUI().getPanelMain());
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
+
         /*try (Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/opm", "postgres", "szakdoga")) {
             System.out.println("Java JDBC PostgreSQL Example");
             System.out.println("Connected to PostgreSQL database!");
